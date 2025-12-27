@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f2f5;
+}
+
+/* Default screen */
+.quiz-container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 400px;        /* Desktop size */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#question {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+.navigation button {
+  margin: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navigation button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#timer {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.progress-bar {
+  width: 100%;
+  background: #eee;
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0;
+  background: #007bff;
+  transition: width 0.3s;
+}
+
+#result {
+  display: none;
+}
+
+#restart {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------------- */
+/* 📱 Mobile Devices (Portrait phones) */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+    height: auto;
+  }
+  .quiz-container {
+    width: 100%;
+    padding: 15px 18px;
+  }
+  #question {
+    font-size: 16px;
+  }
+  #options button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .navigation button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  #timer {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* 📲 Tablets / Medium screens */
+@media (min-width: 481px) and (max-width: 768px) {
+  .quiz-container {
+    width: 80%;
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* 🖥️ Large Screens / Big Desktops */
+@media (min-width: 1200px) {
+  .quiz-container {
+    width: 500px;
+  }
+}
